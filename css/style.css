@@ -519,6 +519,10 @@ a:focus-visible {
   border-color: #b8d3df;
 }
 
+.research-card-head {
+  padding: 25px 25px 20px;
+}
+
 .research-art {
   height: 181px;
   background: #edf5f6;
@@ -545,7 +549,7 @@ a:focus-visible {
 }
 
 .research-card-content {
-  padding: 25px 25px 27px;
+  padding: 20px 25px 27px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -562,7 +566,7 @@ a:focus-visible {
   font-size: 23px;
   letter-spacing: -.045em;
   line-height: 1.28;
-  margin: 14px 0 11px;
+  margin: 12px 0 0;
 }
 
 .research-card p {
@@ -1151,8 +1155,12 @@ a:focus-visible {
     font-size: 20px;
   }
 
+  .research-card-head {
+    padding: 22px 22px 18px;
+  }
+
   .research-card-content {
-    padding: 22px;
+    padding: 18px 22px 22px;
   }
 
   .timeline {
