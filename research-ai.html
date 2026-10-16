@@ -140,13 +140,29 @@
             <div class="framework-top">
               <span>Application / 02</span>
             </div>
+            <h3>Multiphysics PINN for an ethylene polymerization reactor</h3>
+            <p>A multiphysics PINN predicts velocity, pressure, temperature, and species concentrations from reactor operating conditions, trained with continuity, Navier–Stokes, and species balance losses alongside CFD data. It reproduces CFD fields and generalizes beyond the training range more accurately than a conventional neural network.</p>
+            <figure>
+              <img src="assets/multiphysics-pinn.png" alt="Multiphysics PINN architecture for an ethylene polymerization reactor with operating conditions, domain-wise Navier–Stokes equations, adaptive sampling, and training structure, plus training history of empirical, continuity, Navier–Stokes, and species balance losses for PINN and NN" loading="lazy">
+              <img src="assets/multiphysics-pinn-fields.png" alt="Velocity and ethylene concentration fields predicted by CFD, PINN, and NN" loading="lazy">
+              <img src="assets/multiphysics-pinn-extrapolation.png" alt="Extrapolation performance across the operating condition range and error evaluation for PINN and NN" loading="lazy">
+              <figcaption class="framework-caption">
+                <b>Figure 04.</b>
+                <span>Multiphysics PINN architecture and training history (top), velocity and ethylene concentration fields from CFD, PINN, and NN (middle), and extrapolation performance with error evaluation (bottom).</span>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="framework-panel app-case reveal">
+            <div class="framework-top">
+              <span>Application / 03</span>
+            </div>
             <h3>Polymerization reactor optimization for target MWDs</h3>
             <p>A DNN surrogate trained on 3,000 CFD-derived molecular weight distributions maps operating conditions (initiator, chain transfer agent, and temperature) to MWD shape, enabling optimization of a nonideal polymerization reactor for target MWDs.</p>
             <figure>
               <img src="assets/polymerization-surrogate.png" alt="Surrogate development: CFD-derived reactor model, 3,000 operating conditions of initiator, chain transfer agent, and temperature, and DNN training on 3,000 MWD data points with learning curve and accuracy plots" loading="lazy">
               <img src="assets/mwd-optimization.png" alt="MWD shape indices (asymmetry factor and bimodality) with operation maps, and optimized MWDs compared with target MWDs and an ideal CSTR" loading="lazy">
               <figcaption class="framework-caption">
-                <b>Figure 04.</b>
+                <b>Figure 05.</b>
                 <span>DNN surrogate trained on CFD-derived MWD data (top), and MWD shape indices, operation maps, and optimization for target MWDs (bottom).</span>
               </figcaption>
             </figure>
