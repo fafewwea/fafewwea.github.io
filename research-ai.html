@@ -7,7 +7,7 @@
     <meta name="description" content="Scientific AI Integration - research by Sunkyu Shin.">
     <title>Scientific AI Integration | Sunkyu Shin</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <link rel="stylesheet" href="css/style.css?v=20261016f">
+    <link rel="stylesheet" href="css/style.css?v=20261016j">
   </head>
   <body>
     <header class="site-header">
@@ -97,21 +97,38 @@
       </section>
       <section class="section section-white">
         <div class="shell">
-          <div class="feature-wide reveal">
-            <div>
-              <p class="section-kicker">Featured visualization</p>
-              <h2>Physics-informed CFD,<br>in motion.</h2>
-              <p>Your PINN–CFD animation belongs here. Place your GIF in <strong>assets/pinn-cfd.gif</strong> and it will appear automatically, replacing the temporary figure.</p>
-              <div class="pillrow">
-                <span class="pill">CFD prediction</span>
-                <span class="pill">Scientific visualization</span>
-                <span class="pill">GIF-ready</span>
+          <div class="detail-figure reveal">
+            <div class="section-head">
+              <div>
+                <p class="section-kicker">Featured visualization</p>
+                <h2>Physics-informed neural<br>networks for CFD.</h2>
               </div>
+              <p>A deep neural network predicts the velocity field, and automatic differentiation enforces the governing flow equations as residuals in the loss function alongside the empirical error. For flow past a cylinder (von Kármán vortex), the PINN prediction follows the CFD result more closely than a conventional neural network.</p>
             </div>
-            <div class="gif-frame">
-              <span class="gif-badge">GIF-READY FEATURE</span>
-              <img src="assets/pinn-cfd.gif" onerror="this.onerror=null;this.src='assets/ai-thumb.png';" alt="PINN-CFD visualization slot; an overview image is displayed until the GIF is added">
-            </div>
+            <figure class="framework-panel">
+              <img src="assets/PINN.png" alt="PINN structure: a deep neural network whose loss combines empirical error against the true model and physical equation residuals computed by automatic differentiation" loading="lazy">
+              <div class="vortex-demo">
+                <p class="vortex-title">von Kármán vortex</p>
+                <div class="vortex-row">
+                  <div class="vortex-panel">
+                    <img src="assets/vortex-cfd-pinn.webp" alt="CFD simulation of a von Kármán vortex" loading="lazy">
+                    <span>CFD</span>
+                  </div>
+                  <div class="vortex-panel">
+                    <img src="assets/vortex-conventional-nn.webp" alt="Conventional neural network prediction of a von Kármán vortex" loading="lazy">
+                    <span>Conventional NN</span>
+                  </div>
+                  <div class="vortex-panel">
+                    <img src="assets/vortex-cfd-pinn.webp" alt="PINN prediction of a von Kármán vortex" loading="lazy">
+                    <span>PINN</span>
+                  </div>
+                </div>
+              </div>
+              <figcaption class="framework-caption">
+                <b>Figure 01.</b>
+                <span>PINN structure and loss formulation (top), and CFD, conventional NN, and PINN predictions for the von Kármán vortex case (bottom).</span>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -170,6 +187,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/site.js?v=20261016f" defer></script>
+    <script src="js/site.js?v=20261016j" defer></script>
   </body>
 </html>

@@ -7,7 +7,7 @@
     <meta name="description" content="Multiphysics Modeling of Chemical Reactors - research by Sunkyu Shin.">
     <title>Multiphysics Modeling of Chemical Reactors | Sunkyu Shin</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <link rel="stylesheet" href="css/style.css?v=20261016f">
+    <link rel="stylesheet" href="css/style.css?v=20261016j">
   </head>
   <body>
     <header class="site-header">
@@ -66,36 +66,25 @@
               <a href="index.html#research" class="text-link">Explore overall research framework ↗</a>
             </div>
           </div>
+          <div class="detail-figure reveal">
+            <div class="section-head">
+              <div>
+                <p class="section-kicker">Approach / 02</p>
+                <h2>CFD compartment model<br>(chemical reaction network)</h2>
+              </div>
+              <p>CFD flow fields are divided into compartments that form a network of ideal CSTRs, connected through a flow network matrix. This enables efficient coupling of chemical reactions with non-ideal mixing.</p>
+            </div>
+            <figure class="framework-panel">
+              <img src="assets/Compartment.png" alt="Compartment modeling workflow: a CFD reactor model divided into compartments and a flow network matrix, forming a network of CSTRs coupled with chemical reactions" loading="lazy">
+              <figcaption class="framework-caption">
+                <b>Figure 01.</b>
+                <span>Compartment-based reactor modeling: CFD division into a network of multiple CSTRs, coupled with chemical reactions.</span>
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
       <section class="section section-mist">
-        <div class="shell">
-          <div class="section-head">
-            <div>
-              <p class="section-kicker">Research workflow</p>
-              <h2>From methods<br>to insight.</h2>
-            </div>
-          </div>
-          <div class="process-grid">
-            <article class="process-card">
-              <span class="process-num">01</span>
-              <h3>Transport and mixing</h3>
-              <p>Describe heterogeneous flow and thermal fields with computational fluid dynamics and reduced reactor representations.</p>
-            </article>
-            <article class="process-card">
-              <span class="process-num">02</span>
-              <h3>Reaction–population coupling</h3>
-              <p>Integrate reaction kinetics with population balance models to predict molecular weight or particle size distributions.</p>
-            </article>
-            <article class="process-card">
-              <span class="process-num">03</span>
-              <h3>Process-scale prediction</h3>
-              <p>Use computational predictions to understand design and operating-condition effects on product quality.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="section section-white">
         <div class="shell">
           <div class="section-head">
             <div>
@@ -103,19 +92,37 @@
               <h2>Research directions.</h2>
             </div>
           </div>
-          <div class="case-list">
-            <article class="case">
-              <h3>Polymerization reactors</h3>
-              <p>CFD-coupled kinetic and population balance approaches for predicting molecular weight distributions in nonideal, high-pressure polymerization reactors.</p>
-            </article>
-            <article class="case">
-              <h3>Particle population dynamics</h3>
-              <p>Additional experience with mechanistic population balance modeling of nanoparticle formation and size distributions.</p>
-            </article>
-          </div>
+          <article class="framework-panel app-case reveal">
+            <div class="framework-top">
+              <span>Application / 01</span>
+            </div>
+            <h3>Polymerization reactors</h3>
+            <p>CFD-coupled kinetic and population balance approaches for predicting molecular weight distributions in nonideal, high-pressure polymerization reactors.</p>
+            <figure>
+              <img src="assets/Polymerization.png" alt="LDPE autoclave reactor application: CFD temperature profile, internal molecular weight distribution profiles by zone, and validation of predicted molecular weight distribution against plant data" loading="lazy">
+              <figcaption class="framework-caption">
+                <b>Figure 02.</b>
+                <span>LDPE autoclave reactor: CFD temperature profile, internal MWD profiles across reactor zones, and validation of the predicted MWD against plant data.</span>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="framework-panel app-case reveal">
+            <div class="framework-top">
+              <span>Application / 02</span>
+            </div>
+            <h3>Pharmaceutical precipitation</h3>
+            <p>Mechanistic population balance modeling of lipid nanoparticle (LNP) formation, capturing nucleation, growth, and coalescence to predict particle size distributions.</p>
+            <figure>
+              <img src="assets/LNP.png" alt="Lipid nanoparticle precipitation process with nanoprecipitation, incubation, nucleation, growth, and coalescence, and validation of predicted particle size distributions and Z-average diameter against experimental data" loading="lazy">
+              <figcaption class="framework-caption">
+                <b>Figure 03.</b>
+                <span>LNP precipitation process: nanoprecipitation in an impinging jet mixer followed by incubation, and validation of predicted particle size distributions and Z-average diameter against experiments.</span>
+              </figcaption>
+            </figure>
+          </article>
         </div>
       </section>
-      <section class="section section-mist">
+      <section class="section section-white">
         <div class="shell">
           <p class="section-kicker">Related publications</p>
           <h2 style="font-size:clamp(30px,4vw,44px);letter-spacing:-.05em;margin:0">Selected papers.</h2>
@@ -123,6 +130,7 @@
             <a href="https://doi.org/10.1016/j.cej.2021.131829" target="_blank" rel="noopener noreferrer"><span>CFD Modeling for the Prediction of Molecular Weight Distribution in the LDPE Autoclave Reactor</span><small>Chem. Eng. J. · 2022 ↗</small></a>
             <a href="https://doi.org/10.1016/j.ces.2022.118430" target="_blank" rel="noopener noreferrer"><span>CFD Modeling of the Ethylene–Vinyl Acetate Copolymerization Autoclave Reactor</span><small>Chem. Eng. Sci. · 2023 ↗</small></a>
             <a href="https://doi.org/10.1016/j.cej.2024.152008" target="_blank" rel="noopener noreferrer"><span>Surrogate-Model-Based Optimization of a Nonideal Polymerization Reactor</span><small>Chem. Eng. J. · 2024 ↗</small></a>
+            <a href="https://doi.org/10.1016/j.cej.2025.167786" target="_blank" rel="noopener noreferrer"><span>Mechanistic Modeling of Lipid Nanoparticle (LNP) Precipitation via Population Balance Equations (PBEs)</span><small>Chem. Eng. J. · 2025 ↗</small></a>
           </div>
           <div class="return-row">
             <a href="index.html#research" class="btn btn-primary">← Back to research overview</a>
@@ -150,6 +158,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/site.js?v=20261016f" defer></script>
+    <script src="js/site.js?v=20261016j" defer></script>
   </body>
 </html>
