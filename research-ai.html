@@ -7,7 +7,7 @@
     <meta name="description" content="Scientific AI Integration - research by Sunkyu Shin.">
     <title>Scientific AI Integration | Sunkyu Shin</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <link rel="stylesheet" href="css/style.css?v=20261016j">
+    <link rel="stylesheet" href="css/style.css?v=20261016m">
   </head>
   <body>
     <header class="site-header">
@@ -103,30 +103,31 @@
                 <p class="section-kicker">Featured visualization</p>
                 <h2>Physics-informed neural<br>networks for CFD.</h2>
               </div>
-              <p>A deep neural network predicts the velocity field, and automatic differentiation enforces the governing flow equations as residuals in the loss function alongside the empirical error. For flow past a cylinder (von Kármán vortex), the PINN prediction follows the CFD result more closely than a conventional neural network.</p>
+              <p>A deep neural network learns flow fields from both data and the governing physical equations, keeping its predictions consistent with the underlying physics. As a result, the PINN reproduces CFD flow fields more closely than a conventional neural network.</p>
             </div>
             <figure class="framework-panel">
+              <img class="concept-figure" src="assets/PINN_concept.png" alt="Concept comparison: data-driven AI fits model or experiment data, while physics-informed AI is trained with physical information on species, momentum, and energy" loading="lazy">
               <img src="assets/PINN.png" alt="PINN structure: a deep neural network whose loss combines empirical error against the true model and physical equation residuals computed by automatic differentiation" loading="lazy">
               <div class="vortex-demo">
-                <p class="vortex-title">von Kármán vortex</p>
+                <p class="vortex-title">Flow-field prediction comparison</p>
                 <div class="vortex-row">
                   <div class="vortex-panel">
-                    <img src="assets/vortex-cfd-pinn.webp" alt="CFD simulation of a von Kármán vortex" loading="lazy">
+                    <img src="assets/vortex-cfd-pinn.webp" alt="Flow field from CFD simulation" loading="lazy">
                     <span>CFD</span>
                   </div>
                   <div class="vortex-panel">
-                    <img src="assets/vortex-conventional-nn.webp" alt="Conventional neural network prediction of a von Kármán vortex" loading="lazy">
+                    <img src="assets/vortex-conventional-nn.webp" alt="Flow field predicted by a conventional neural network" loading="lazy">
                     <span>Conventional NN</span>
                   </div>
                   <div class="vortex-panel">
-                    <img src="assets/vortex-cfd-pinn.webp" alt="PINN prediction of a von Kármán vortex" loading="lazy">
+                    <img src="assets/vortex-cfd-pinn.webp" alt="Flow field predicted by the PINN" loading="lazy">
                     <span>PINN</span>
                   </div>
                 </div>
               </div>
               <figcaption class="framework-caption">
                 <b>Figure 01.</b>
-                <span>PINN structure and loss formulation (top), and CFD, conventional NN, and PINN predictions for the von Kármán vortex case (bottom).</span>
+                <span>Data-driven versus physics-informed AI (top), PINN structure and loss formulation (middle), and flow fields predicted by CFD, a conventional NN, and the PINN (bottom).</span>
               </figcaption>
             </figure>
           </div>
@@ -140,12 +141,32 @@
               <h2>Research directions.</h2>
             </div>
           </div>
-          <div class="case-list">
-            <article class="case">
-              <h3>Geometry-aware CFD surrogates</h3>
-              <p>Physics-informed models for flow prediction and geometry-dependent reactor optimization, with room to showcase the existing PINN–CFD animation.</p>
-            </article>
-            <article class="case">
+          <article class="framework-panel app-case reveal">
+            <div class="framework-top">
+              <span>Application / 01</span>
+            </div>
+            <h3>Reactor blade design using geometry-aware PINN</h3>
+            <p>Geometry-aware PINNs that predict flow fields across blade geometries, enabling simultaneous optimization of reactor design and operating conditions.</p>
+            <figure>
+              <p class="fig-subtitle">Structure of geometry-aware PINN</p>
+              <img src="assets/geometric-pinn.png" alt="Geometry-aware PINN: reactor design parameters (height, stirring rate, radius) and geometric boundary conditions feed a PINN that predicts the flow field" loading="lazy">
+              <p class="fig-subtitle">Flow reconstruction performance</p>
+              <div class="anim-overlay">
+                <img src="assets/geometric-pinn-results.png" alt="Results: CFD and PINN streamlines, stirred reactor schematic with blade height and stirring rate, and predicted velocity fields at various blade heights and stirring rates" loading="lazy">
+                <img class="anim-layer" style="left:51.919%;top:11.825%;width:24.078%;height:74.550%" src="assets/blade-height-vz.webp" alt="" loading="lazy">
+                <img class="anim-layer" style="left:77.050%;top:12.339%;width:22.272%;height:74.036%" src="assets/stirring-rate-vx.webp" alt="" loading="lazy">
+              </div>
+              <figcaption class="framework-caption">
+                <b>Figure 02.</b>
+                <span>Geometry-aware PINN for a stirred reactor (top), and CFD versus PINN flow fields with predicted velocity fields across blade heights and stirring rates (bottom).</span>
+              </figcaption>
+            </figure>
+          </article>
+          <div class="case-list single">
+            <article class="case reveal">
+              <div class="framework-top">
+                <span>Application / 02</span>
+              </div>
               <h3>Multiphysics acceleration</h3>
               <p>Develop computationally efficient substitutes for repeated, expensive reactor-model evaluations.</p>
             </article>
@@ -187,6 +208,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/site.js?v=20261016j" defer></script>
+    <script src="js/site.js?v=20261016m" defer></script>
   </body>
 </html>

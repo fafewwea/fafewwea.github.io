@@ -923,6 +923,13 @@ a:focus-visible {
   margin-bottom: 0;
 }
 
+.concept-figure {
+  max-width: 760px;
+  margin: 0 auto 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+
 .vortex-demo {
   margin-top: 22px;
   padding: 18px 20px 20px;
@@ -1138,6 +1145,32 @@ a:focus-visible {
 
 .app-case figure {
   margin: 0;
+}
+
+.fig-subtitle {
+  margin: 0 0 12px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.app-case figure > img + .fig-subtitle {
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.anim-overlay {
+  position: relative;
+}
+
+.anim-overlay img {
+  width: 100%;
+}
+
+.anim-overlay .anim-layer {
+  position: absolute;
+  object-fit: fill;
 }
 
 .ref-links {
