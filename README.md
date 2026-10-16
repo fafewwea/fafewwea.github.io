@@ -4,8 +4,8 @@ A self-contained, responsive, static academic portfolio. No paid service, web fr
 
 ## Pages
 - `index.html`: Homepage. Top-level navigation: Profile / Research / Experience / Publications.
-- `research-kinetics.html`: Quantum–Kinetic Modeling.
-- `research-reactors.html`: Multiphysics Reactor Modeling.
+- `research-kinetics.html`: Quantum Chemistry–Based Automated Reaction Network Modeling.
+- `research-reactors.html`: Multiphysics Modeling of Chemical Reactors.
 - `research-ai.html`: Scientific AI Integration.
 
 ## Preview on your computer

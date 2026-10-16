@@ -421,8 +421,14 @@ a:focus-visible {
   margin: 16px 0 0;
 }
 
+.research-head {
+  display: grid;
+  grid-template-columns: minmax(0,1.2fr) minmax(0,1fr);
+  gap: 48px;
+}
+
 .research-head > p {
-  max-width: 540px;
+  max-width: none;
   font-size: 16.5px;
 }
 
@@ -504,13 +510,23 @@ a:focus-visible {
   min-height: 440px;
   background: #fff;
   border: 1px solid #dce8ec;
-  border-radius: 24px;
+  border-radius: 6px;
   overflow: hidden;
   position: relative;
   box-shadow: 0 4px 19px rgba(35,73,89,.02);
   display: flex;
   flex-direction: column;
   transition: transform .23s,box-shadow .23s,border-color .23s;
+}
+
+@supports (grid-template-rows: subgrid) {
+  /* line up the images across cards even when titles wrap differently */
+  .research-card {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    row-gap: 0;
+  }
 }
 
 .research-card:hover {
@@ -570,10 +586,10 @@ a:focus-visible {
 }
 
 .research-card p {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--muted);
   margin: 0 0 28px;
-  line-height: 1.8;
+  line-height: 1.7;
 }
 
 .card-arrow {
@@ -1172,6 +1188,17 @@ a:focus-visible {
   }
 }
 
+@media (max-width: 900px) {
+  .research-head {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .research-head > p {
+    max-width: 640px;
+  }
+}
+
 @media (max-width: 780px) {
   .shell {
     padding: 0 24px;
@@ -1360,6 +1387,10 @@ a:focus-visible {
 
   .section-head h2 {
     font-size: 32px;
+  }
+
+  .research-head h2 {
+    font-size: 28px;
   }
 
   .timeline-entry {
