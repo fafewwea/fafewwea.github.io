@@ -535,6 +535,31 @@ a:focus-visible {
   border-color: #b8d3df;
 }
 
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-link {
+  flex-shrink: 0;
+  font-size: 12.5px;
+  font-weight: 760;
+  color: var(--accent);
+  border: 1px solid #cce0e5;
+  border-radius: 999px;
+  padding: 6px 12px;
+  background: #fff;
+  transition: background .2s,color .2s,border-color .2s;
+}
+
+.research-card:hover .card-link {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
 .research-card-head {
   padding: 25px 25px 20px;
 }
@@ -588,7 +613,7 @@ a:focus-visible {
 .research-card p {
   font-size: 15px;
   color: var(--muted);
-  margin: 0 0 28px;
+  margin: 0;
   line-height: 1.7;
 }
 
@@ -898,9 +923,11 @@ a:focus-visible {
 }
 
 .page-lead h1 {
-  font-size: clamp(43px,5.4vw,75px);
+  font-size: clamp(32px,3.6vw,48px);
+  letter-spacing: -.045em;
+  line-height: 1.15;
   max-width: 900px;
-  margin: 20px 0 26px;
+  margin: 18px 0 22px;
 }
 
 .page-lead>p {
@@ -1133,6 +1160,13 @@ a:focus-visible {
 
 .case .framework-top {
   margin-bottom: 12px;
+}
+
+.app-case > .framework-top,
+.case .framework-top {
+  font-size: 13.5px;
+  letter-spacing: .12em;
+  color: var(--accent-2);
 }
 
 .app-case h3 {
