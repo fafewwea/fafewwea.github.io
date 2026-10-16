@@ -919,6 +919,12 @@ a:focus-visible {
   margin-top: 0;
 }
 
+.detail-figure .section-head h2 {
+  font-size: 34px;
+  letter-spacing: -.05em;
+  line-height: 1.2;
+}
+
 .detail-figure .section-head {
   margin-bottom: 0;
 }
@@ -1152,6 +1158,12 @@ a:focus-visible {
   font-size: 15px;
   font-weight: 700;
   color: var(--ink);
+}
+
+.app-case figure > img + img {
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
 }
 
 .app-case figure > img + .fig-subtitle {
